@@ -9,7 +9,7 @@ public class PlayerBattle : MonoBehaviour
 {
     // Start is called before the first frame update
     [Range(1,5)]
-    public float speed;
+    public int speed;
         CharacterController cc;
 
     Animator anim;
