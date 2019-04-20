@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class BattleArenaTrigger : MonoBehaviour{
@@ -15,13 +16,26 @@ public class BattleArenaTrigger : MonoBehaviour{
     public GameObject Trigger09;
     public GameObject Trigger10;
     public GameObject Trigger11;
+
+    public TriggerCollision trigger1;
+    public TriggerCollision trigger2;
+    public TriggerCollision trigger3;
+    public TriggerCollision trigger4;
+    public TriggerCollision trigger5;
+    public TriggerCollision trigger6;
+    public TriggerCollision trigger7;
+    public TriggerCollision trigger8;
+    public TriggerCollision trigger9;
+    public TriggerCollision trigger10;
+    public TriggerCollision trigger11;
+
+    public int sceneNumber;
     //These are the individual names of each trigger, in decending order from left to right. 
-
-    public void OnTriggerEnter(Collider other)
-
+     void Start()
     {
         
     }
+
 
     // Update is called once per frame
     void Update()
