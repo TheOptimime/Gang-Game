@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class Player : MonoBehaviour
+public class PlayerBattle : MonoBehaviour
 {
     // Start is called before the first frame update
     [Range(1,5)]
@@ -25,10 +25,9 @@ public class Player : MonoBehaviour
             cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
         }
 
-        if (Input.GetAxis("Vertical")!=0)
+        if (Input.GetAxis("Vertical")!= 0)
         {
-            cc.Move(Vector3.forward * Input.GetAxis("Vertical") * speed);
+            cc.Move(Vector3.up * Input.GetAxis("Vertical") * speed);
         }
-
     }
 }
