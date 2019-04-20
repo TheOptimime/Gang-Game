@@ -83,6 +83,13 @@ public class PlayerBattle : MonoBehaviour
             _Movement = false;
         }
 
+
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            anim.SetTrigger("isAttacking");
+        }
+
         Debug.Log(Input.GetAxis("Horizontal"));
 
 
