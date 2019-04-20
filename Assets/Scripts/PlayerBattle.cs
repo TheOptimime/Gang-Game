@@ -16,6 +16,9 @@ public class PlayerBattle : MonoBehaviour
 
     public bool _Movement;
 
+    public int health, maxHealth;
+    
+
 
     void Start()
     {
@@ -23,6 +26,8 @@ public class PlayerBattle : MonoBehaviour
         _Movement = false;
 
         anim = GetComponent<Animator>();
+
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -36,7 +41,7 @@ public class PlayerBattle : MonoBehaviour
         //moveposition.y = (Input.GetAxis("Vertical"));
 
 
-        if (Input.GetAxis("Horizontal") > 0)
+        if (Input.GetAxisRaw("Horizontal") > 0)
         {
             cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
 
@@ -49,7 +54,11 @@ public class PlayerBattle : MonoBehaviour
             anim.SetBool("isMovingRight", false);
         }
 
-        if (Input.GetAxis("Horizontal") < 0)
+
+
+
+
+        if (Input.GetAxisRaw("Horizontal") < 0)
         {
             cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
 
@@ -64,14 +73,7 @@ public class PlayerBattle : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-        if (Input.GetAxis("Vertical")!= 0)
+        if (Input.GetAxisRaw("Vertical")!= 0)
         {
             cc.Move(Vector3.up * Input.GetAxis("Vertical") * speed);
             _Movement = true;
@@ -81,21 +83,18 @@ public class PlayerBattle : MonoBehaviour
             _Movement = false;
         }
 
+
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            anim.SetTrigger("isAttacking");
+        }
+
         Debug.Log(Input.GetAxis("Horizontal"));
+
+
         //cc.Move(moveposition * Time.deltaTime * speed);
     }
 
-    public void WalkAnimation()
-    {
-        if(_Movement == true)
-        {
-       
-        }
-
-        if(_Movement == false)
-        {
-            
-        }
-    }
 
 }
