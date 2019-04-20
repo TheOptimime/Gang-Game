@@ -13,7 +13,7 @@ public class CountdownTimer : MonoBehaviour
     void Start()
     {
         currentTime = startingTime;
-        string.Format("{0:00}", currentTime);
+        
     }
 
    
