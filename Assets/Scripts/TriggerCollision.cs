@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class TriggerCollision : MonoBehaviour
 {
+    private EnemyMapMovement enemyMapMovement;
     public GameObject Player;
+    public ZoneColor zoneColor;
+    public int sceneNumber;
+    private GameObject EnemyPlayerRed;
+    private GameObject EnemyPlayerGreen;
     public enum ZoneColor
     {
         Blue,
@@ -13,16 +18,13 @@ public class TriggerCollision : MonoBehaviour
         Red,
         Nuetral,
     }
-    public ZoneColor zoneColor;
-    public int sceneNumber;
-    // Start is called before the first frame update
-    // ontriggerenter  scenemanager
+    
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
        if(other.gameObject.tag=="Player")
@@ -33,6 +35,7 @@ public class TriggerCollision : MonoBehaviour
 
         if (other.gameObject.tag == "MapEnemy")
         {
+            other.gameObject.transform.position = new Vector3(-100, -100, -100);
             Debug.Log("EnemyTriggerActive");
         }
        
