@@ -107,7 +107,7 @@ public class PlayerBattle : MonoBehaviour
 
         if (health <= 0)
         {
-            //GameManager.instance.lose
+            GameManager.instance.LoseGame();
         }
 
 

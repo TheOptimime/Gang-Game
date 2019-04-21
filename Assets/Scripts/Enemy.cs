@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
 
     public int health, maxHealth;
-
+    
     protected bool isDamaged;
 
     public float bufferTime;
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     {
         health = maxHealth;
         isDamaged = false;
-        
+        GameManager.numberOfEnemies++;
 
 
     }
@@ -29,6 +29,12 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(health <= 0)
+        {
+            GameManager.numberOfEnemies--;
+            Destroy(this.gameObject);
+        }
 
         if (isDamaged==true)
         {
