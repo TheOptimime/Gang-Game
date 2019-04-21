@@ -1,4 +1,4 @@
-﻿using System.Collections; using System.Collections.Generic; using UnityEngine;  public class Enemy_movement : MonoBehaviour {      public Transform target;     public float speed;     Animator animation;     int direction;     // Start is called before the first frame update     void Start()     {         direction = 1;         animation = GetComponent<Animator>();          target = FindObjectOfType<Player>().transform;     }     // Update is called once per frame     void Update()     {
+﻿using System.Collections; using System.Collections.Generic; using UnityEngine;  public class Enemy_movement : MonoBehaviour {      public Transform target;     public float speed;     Animator animation;     int direction;     // Start is called before the first frame update     void Start()     {         direction = 1;         animation = GetComponent<Animator>();          target = FindObjectOfType<PlayerBattle>().transform;     }     // Update is called once per frame     void Update()     {
             Vector3 distance = transform.position - target.position;
             Vector3 movePos = new Vector3();
 

@@ -22,7 +22,7 @@ public class TriggerCollision : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                GameManager.instance.SwitchToCombat();
+                GameManager.instance.SwitchToCombat(zoneColor);
                 //SceneManager.LoadScene(1);
                 Debug.Log("Trigger Active");
             }
