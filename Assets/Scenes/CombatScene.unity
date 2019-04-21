@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 210257364}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,9 +420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2b212e1c6ab46d2b033b2a6a3956e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   _Movement: 0
-  health: 0
+  health: 5
   maxHealth: 5
   beingDamaged: 0
   invulTime: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
   maxHealth: 0
   bufferTime: 0
   bufferMaxTime: 0
-  damage: 1
+  damage: 0
 --- !u!135 &1488349703
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1033,7 +1033,7 @@ GameObject:
   - component: {fileID: 1934868502}
   - component: {fileID: 1934868503}
   m_Layer: 0
-  m_Name: Collision Dummy
+  m_Name: Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1179,10 +1179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a2985a0d53242718b04dd940e56acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 5
   maxHealth: 5
-  bufferTime: 1
-  bufferMaxTime: 1
+  bufferTime: 0
+  bufferMaxTime: 0
 --- !u!114 &1934868503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,7 +1196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 210257359}
-  speed: 3
+  speed: 4
 --- !u!1 &1998406137
 GameObject:
   m_ObjectHideFlags: 0

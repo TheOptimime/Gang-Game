@@ -35,13 +35,13 @@
         if (distance.x > 0)
         {
 
-
             if (direction > 0)
             {
                 transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
                 direction *= -1;
             }
         }         if (distance.x < 20)         {             animation.SetBool("isAttacking",true);         }         if (distance.x > -20)         {             animation.SetBool("isAttacking", true);         }         if (distance.x > 20)         {             animation.SetBool("isAttacking", false);         }         if (distance.x < -20)         {             animation.SetBool("isAttacking", false);         }
+
         transform.Translate(movePos * Time.deltaTime * speed);
     }                
 }
