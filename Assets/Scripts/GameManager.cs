@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        print(numberOfEnemies);
+       // print(numberOfEnemies);
         
         currentTime -= 1 * Time.deltaTime;
         countdownTimer.text = currentTime.ToString("0");

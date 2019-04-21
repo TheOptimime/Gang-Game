@@ -33,27 +33,27 @@ public class EnemyMapMovement : MonoBehaviour
 
 
         Vector3 movePos = new Vector3();
-        print(target + " : " + bat.triggers[target].name);
+      //  print(target + " : " + bat.triggers[target].name);
 
         if(transform.position.x - bat.triggers[target].transform.position.x < 0)
         {
-            print("x before");
+           // print("x before");
             movePos.x = speed;
         }
         else if(transform.position.x - bat.triggers[target].transform.position.x > 0)
         {
-            print("x over");
+            //print("x over");
             movePos.x = speed * -1;
         }
 
         if(transform.position.z - bat.triggers[target].transform.position.z < 0)
         {
-            print("z before");
+           // print("z before");
             movePos.z = speed;
         }
         else if(transform.position.z - bat.triggers[target].transform.position.z > 0)
         {
-            print("z over");
+           // print("z over");
             movePos.z = speed * -1;
         }
 
@@ -62,7 +62,7 @@ public class EnemyMapMovement : MonoBehaviour
 
         cc.Move(movePos * Time.deltaTime);
 
-        print(bat.triggers[target].transform.position);
+       // print(bat.triggers[target].transform.position);
 
 
     }
