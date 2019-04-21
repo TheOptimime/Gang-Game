@@ -21,8 +21,8 @@ public class Enemy : MonoBehaviour
     {
         health = maxHealth;
         isDamaged = false;
-        
 
+        GameManager.numberOfEnemies++;
 
     }
 
@@ -41,7 +41,11 @@ public class Enemy : MonoBehaviour
             
         }
 
-
+        if(health <= 0)
+        {
+            GameManager.numberOfEnemies--;
+            Destroy(this.gameObject);
+        }
                
 
 
