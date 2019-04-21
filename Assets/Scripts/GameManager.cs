@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public static int numberOfEnemies;
-
-    public string overworldScene;
+    public static int score, redScore, greenScore;
+    public string overworldScene, loseGameScene, winGameScene;
 
     public enum GameState
     {
@@ -76,9 +76,27 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(overworldScene);
             }
         }
+        else if(gameState == GameState.EndGame)
+        {
+            if(currentTime <= 0)
+            {
+                // First Pass of Win Condition
+                if(score > redScore && score > greenScore)
+                {
+                    SceneManager.LoadScene(winGameScene);
+                }
+            }
+
+            SceneManager.LoadScene(loseGameScene);
+        }
         
 
         // Update is called once per frame
+
+    }
+
+    public void LoseGame()
+    {
 
     }
 
