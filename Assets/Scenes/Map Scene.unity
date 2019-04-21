@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 0
   sceneNumber: 1
 --- !u!1 &129643423
 GameObject:
@@ -329,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 2
   sceneNumber: 1
 --- !u!1 &178457708
 GameObject:
@@ -475,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 3
   sceneNumber: 1
 --- !u!1 &275179472
 GameObject:
@@ -580,6 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 2
   sceneNumber: 1
 --- !u!1 &386804695
 GameObject:
@@ -700,7 +704,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386804695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: 38, y: 0, z: 44}
+=======
   m_LocalPosition: {x: 130.8, y: 0, z: -47.350006}
+>>>>>>> parent of e0b39a6... update
   m_LocalScale: {x: 11.607781, y: 11.607781, z: 11.607781}
   m_Children: []
   m_Father: {fileID: 0}
@@ -810,6 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 0
   sceneNumber: 1
 --- !u!1 &394358331
 GameObject:
@@ -915,6 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 1
   sceneNumber: 1
 --- !u!1 &513392311
 GameObject:
@@ -1386,6 +1396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 2
   sceneNumber: 1
 --- !u!1 &1098083058
 GameObject:
@@ -2019,6 +2030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 1
   sceneNumber: 1
 --- !u!1 &1507541156
 GameObject:
@@ -2248,6 +2260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 3
   sceneNumber: 1
 --- !u!1 &2044282124
 GameObject:
@@ -2353,6 +2366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  zoneColor: 0
+=======
+>>>>>>> parent of e0b39a6... update
   sceneNumber: 0
 --- !u!1 &2075596337
 GameObject:
@@ -2458,6 +2475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 1
   sceneNumber: 1
 --- !u!1 &2079892134
 GameObject:
