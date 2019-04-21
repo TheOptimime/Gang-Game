@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerColor : MonoBehaviour
+public class MainMenuStart : MonoBehaviour
 {
-    public 
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,10 @@ public class PlayerColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.anyKey)
+        {
+            SceneManager.LoadScene(0);
+            Debug.Log("Where Am I");
+        }
     }
 }
