@@ -79,7 +79,7 @@ public class EnemyMapMovement : MonoBehaviour
 
     public void SetEnemyMapMovementData(EnemyMapMovementInfo emmi)
     {
-        emmi = new EnemyMapMovementInfo();
+        //emmi = new EnemyMapMovementInfo();
         target = emmi.target;
         speed = emmi.speed;
         transform.position = emmi.position;
