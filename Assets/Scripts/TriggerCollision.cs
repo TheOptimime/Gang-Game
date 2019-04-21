@@ -24,8 +24,24 @@ public class TriggerCollision : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(1);
-        Debug.Log("Trigger Active");
+
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                SceneManager.LoadScene(1);
+                Debug.Log("Trigger Active");
+            }
+
+            if (other.gameObject.tag == "MapEnemy")
+            {
+
+                other.gameObject.transform.position = new Vector3(-100, -100, -100);
+                Debug.Log("EnemyTriggerActive");
+            }
+
+
+        }
+
     }
     void Update()
     {
