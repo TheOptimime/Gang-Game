@@ -50,10 +50,11 @@ public class Enemy : MonoBehaviour
     {
         print("waiting");
         yield return new WaitForSeconds(buffering);
+        Time.timeScale = 0; 
+
         print("done");
         isDamaged = false; 
 
     }
-    //wait
-    //set false
+   
 }
