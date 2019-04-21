@@ -6,22 +6,27 @@ using UnityEngine.SceneManagement;
 public class EnemyMapMovement : MonoBehaviour
 
 {
-    public class EnemyPlayer
-    {
-
-    }
+    
     public BattleArenaTrigger bat;
     public float speed = 1;
     public int greenPoints;
     public int redPoints;
     public int target;
     public CharacterController cc;
+    public bool hidden;
+    public GangColor gangColor;
+
+    public GameObject SpawnPoints;
 
     // Start is called before the first frame update
     void Start()
     {
         bat = FindObjectOfType<BattleArenaTrigger>();
         cc = gameObject.AddComponent<CharacterController>();
+
+        Transform[] spawnPoints = GetComponentsInChildren<Transform>();
+
+        transform.position = spawnPoints[Random.Range(0, spawnPoints.Length - 1)].position;
 
     }
 
@@ -33,27 +38,27 @@ public class EnemyMapMovement : MonoBehaviour
 
 
         Vector3 movePos = new Vector3();
-        print(target + " : " + bat.triggers[target].name);
+      //  print(target + " : " + bat.triggers[target].name);
 
         if(transform.position.x - bat.triggers[target].transform.position.x < 0)
         {
-            print("x before");
+           // print("x before");
             movePos.x = speed;
         }
         else if(transform.position.x - bat.triggers[target].transform.position.x > 0)
         {
-            print("x over");
+            //print("x over");
             movePos.x = speed * -1;
         }
 
         if(transform.position.z - bat.triggers[target].transform.position.z < 0)
         {
-            print("z before");
+           // print("z before");
             movePos.z = speed;
         }
         else if(transform.position.z - bat.triggers[target].transform.position.z > 0)
         {
-            print("z over");
+           // print("z over");
             movePos.z = speed * -1;
         }
 
@@ -62,8 +67,36 @@ public class EnemyMapMovement : MonoBehaviour
 
         cc.Move(movePos * Time.deltaTime);
 
-        print(bat.triggers[target].transform.position);
+       // print(bat.triggers[target].transform.position);
 
 
     }
+
+    public void SetEnemyMapMovementData(EnemyMapMovementInfo emmi)
+    {
+        target = emmi.target;
+        speed = emmi.speed;
+        transform.position = emmi.position;
+        gangColor = emmi.gangColor;
+    }
+
+    public EnemyMapMovementInfo StoreEnemyMapMovementData()
+    {
+        EnemyMapMovementInfo emmi = new EnemyMapMovementInfo();
+        emmi.target = target;
+        emmi.speed = speed;
+        emmi.position = transform.position;
+        emmi.gangColor = gangColor;
+
+        return (emmi);
+    }
+
+}
+
+public class EnemyMapMovementInfo
+{
+    public Vector3 position;
+    public int target;
+    public float speed;
+    public GangColor gangColor;
 }

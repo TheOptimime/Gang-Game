@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerBattle : MonoBehaviour
@@ -28,7 +27,6 @@ public class PlayerBattle : MonoBehaviour
     public float invulTime;
 
 
-
     void Start()
     {
         cc = GetComponent<CharacterController>();
@@ -36,7 +34,8 @@ public class PlayerBattle : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
-        health = maxHealth;
+        //health = maxHealth;
+        health = GameManager.instance.playerHealth;
 
         direction = 1;
 
@@ -107,8 +106,7 @@ public class PlayerBattle : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene(0);
-            Debug.Log("TriggerSceneChange");
+            //GameManager.instance.lose
         }
 
 
@@ -125,7 +123,7 @@ public class PlayerBattle : MonoBehaviour
         beingDamaged = false;
         //print("DONE!!");
     }
-    
+
 
     private void OnControllerColliderHit(ControllerColliderHit other)
     {
