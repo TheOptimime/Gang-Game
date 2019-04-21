@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 0
   sceneNumber: 1
 --- !u!1 &129643423
 GameObject:
@@ -329,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 2
   sceneNumber: 1
 --- !u!1 &178457708
 GameObject:
@@ -475,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 3
   sceneNumber: 1
 --- !u!1 &275179472
 GameObject:
@@ -580,6 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 2
   sceneNumber: 1
 --- !u!1 &386804695
 GameObject:
@@ -700,7 +704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386804695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 130.8, y: 0, z: -47.350006}
+  m_LocalPosition: {x: 38, y: 0, z: 44}
   m_LocalScale: {x: 11.607781, y: 11.607781, z: 11.607781}
   m_Children: []
   m_Father: {fileID: 0}
@@ -810,6 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 0
   sceneNumber: 1
 --- !u!1 &394358331
 GameObject:
@@ -915,6 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 1
   sceneNumber: 1
 --- !u!1 &513392311
 GameObject:
@@ -1386,6 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 2
   sceneNumber: 1
 --- !u!1 &1098083058
 GameObject:
@@ -2019,6 +2026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 1
   sceneNumber: 1
 --- !u!1 &1507541156
 GameObject:
@@ -2248,6 +2256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 3
   sceneNumber: 1
 --- !u!1 &2044282124
 GameObject:
@@ -2353,6 +2362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 0
   sceneNumber: 0
 --- !u!1 &2075596337
 GameObject:
@@ -2458,6 +2468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneColor: 1
   sceneNumber: 1
 --- !u!1 &2079892134
 GameObject:
@@ -2503,28 +2514,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e0a2514fc4ba247a6a9548bb9545ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Trigger01: {fileID: 8211721}
-  Trigger02: {fileID: 2044282124}
-  Trigger03: {fileID: 390995812}
-  Trigger04: {fileID: 394358331}
-  Trigger05: {fileID: 2025717426}
-  Trigger06: {fileID: 275179472}
-  Trigger07: {fileID: 2075596337}
-  Trigger08: {fileID: 1505340327}
-  Trigger09: {fileID: 232783137}
-  Trigger10: {fileID: 129643423}
-  Trigger11: {fileID: 1082635296}
-  trigger1: {fileID: 8211726}
-  trigger2: {fileID: 2044282129}
-  trigger3: {fileID: 390995817}
-  trigger4: {fileID: 394358336}
-  trigger5: {fileID: 2025717431}
-  trigger6: {fileID: 275179477}
-  trigger7: {fileID: 2075596342}
-  trigger8: {fileID: 1505340332}
-  trigger9: {fileID: 232783142}
-  trigger10: {fileID: 129643428}
-  trigger11: {fileID: 1082635301}
+  triggers: []
+  triggerCollisions: []
   sceneNumber: 0
 --- !u!1 &2136673652
 GameObject:
