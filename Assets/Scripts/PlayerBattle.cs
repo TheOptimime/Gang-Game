@@ -19,7 +19,12 @@ public class PlayerBattle : MonoBehaviour
     public int health, maxHealth;
 
     int direction;
-    
+
+    bool beingDamaged;
+
+    int takenDamage;
+
+    float invulTime;
 
 
     void Start()
@@ -32,19 +37,15 @@ public class PlayerBattle : MonoBehaviour
         health = maxHealth;
 
         direction = 1;
+
+        takenDamage = 1;
+
+        StartCoroutine(Invinsible());
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        //Vector3 moveposition = new Vector3();
-
-        //moveposition.x = (Input.GetAxis("Horizontal"));
-
-        //moveposition.y = (Input.GetAxis("Vertical"));
-
-
 
 
         if (Input.GetAxisRaw("Horizontal")!=0||Input.GetAxisRaw("Vertical") !=0)
@@ -96,41 +97,6 @@ public class PlayerBattle : MonoBehaviour
         }
 
 
-        //if (Input.GetAxisRaw("Horizontal") > 0)
-        //{
-        //    cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
-
-        //    anim.SetBool("isMovingRight", true);
-
-        //    _Movement = true;
-        //}
-        //else
-        //{
-        //    anim.SetBool("isMovingRight", false);
-        //}
-
-
-
-
-
-        //if (Input.GetAxisRaw("Horizontal") < 0)
-        //{
-        //    cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
-
-        //    anim.SetBool("isMovingLeft", true);
-
-        //    _Movement = true;
-        //}
-        //else
-        //{
-        //    anim.SetBool("isMovingLeft", false);
-        //}
-
-
-
-
-
-
 
         if (Input.GetKeyDown(KeyCode.J))
         {
@@ -140,11 +106,31 @@ public class PlayerBattle : MonoBehaviour
         //Debug.Log(Input.GetAxis("Horizontal"));
 
 
-
+        IEnumerator Example();
+        {
+            print ("no change")
+            yield return new WaitForSeconds(2);
+            invulTime = false;
+            print("DONE!!");
+        }
 
 
         //cc.Move(moveposition * Time.deltaTime * speed);
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (other.gameObject.tag == ("enemy") && invulTime = false)
+        {
+            invulTime = true;
+            health -= takenDamage;
+
+
+        }
+
+    }
+
 
 
 }
