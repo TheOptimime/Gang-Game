@@ -422,8 +422,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   _Movement: 0
-  health: 0
-  maxHealth: 5
+  health: 10
+  maxHealth: 10
+  beingDamaged: 0
+  invulTime: 0
 --- !u!143 &210257362
 CharacterController:
   m_ObjectHideFlags: 0

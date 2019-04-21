@@ -13,14 +13,15 @@ public class GameManager : MonoBehaviour
     public string overworldScene, loseGameScene, winGameScene, combatSceneGreen, combatSceneRed;
 
     public int playerHealth;
+    static bool init;
 
     public EnemyMapMovementInfo[] emmis;
 
-    bool overworldInitialLoad;
+    static bool overworldInitialLoad;
 
-    BattleArenaTrigger bat;
+    static BattleArenaTrigger bat;
 
-    EnemyMapMovement[] emms;
+    static EnemyMapMovement[] emms;
 
     public enum GameState
     {
@@ -29,9 +30,9 @@ public class GameManager : MonoBehaviour
         EndGame
     }
 
-    public GameState gameState;
+    public static GameState gameState;
 
-    GangColor[] ZoneColors;
+    static GangColor[] ZoneColors;
 
     private void Awake()
     {
@@ -176,7 +177,7 @@ public class GameManager : MonoBehaviour
 
 
         gameState = GameState.InBattle;
-
+        numberOfEnemies++;
         if (color == GangColor.Green)
         {
             SceneManager.LoadScene(combatSceneGreen);

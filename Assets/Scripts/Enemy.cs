@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public float bufferMaxTime;
 
     Animator animator;
-
+    bool init;
 
 
 
@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     {
         health = maxHealth;
         isDamaged = false;
-        GameManager.numberOfEnemies++;
+        
 
 
     }
@@ -31,7 +31,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (!init)
+        {
+            GameManager.numberOfEnemies++;
+            init = true;
+        }
         if(health <= 0)
         {
             GameManager.numberOfEnemies--;

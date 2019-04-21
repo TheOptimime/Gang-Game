@@ -422,8 +422,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   _Movement: 0
-  health: 0
-  maxHealth: 5
+  health: 10
+  maxHealth: 10
   beingDamaged: 0
   invulTime: 1
 --- !u!143 &210257362
@@ -1663,6 +1663,8 @@ MonoBehaviour:
   overworldScene: 
   loseGameScene: 
   winGameScene: 
+  combatSceneGreen: 
+  combatSceneRed: 
   playerHealth: 10
   countdownTimer: {fileID: 0}
 --- !u!4 &1661359997
