@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Empty Map.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/CombatScene.unity
+    path: Assets/Scenes/TestCombat.unity
     guid: 851af7312442a49f1b049fdb0aa48691
+  - enabled: 1
+    path: Assets/Scenes/CombatScene_Green.unity
+    guid: 4606933f1e41aa24399c03898f204154
+  - enabled: 1
+    path: Assets/Scenes/CombatScene_Red.unity
+    guid: 08b80c87132c957478d6b3b168e97c98
+  - enabled: 1
+    path: Assets/Scenes/Map Scene.unity
+    guid: da5d40c4bd84246a5803854fd08117e7
   m_configObjects: {}
