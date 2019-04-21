@@ -17,6 +17,8 @@ public class PlayerBattle : MonoBehaviour
     public bool _Movement;
 
     public int health, maxHealth;
+
+    int direction;
     
 
 
@@ -28,6 +30,8 @@ public class PlayerBattle : MonoBehaviour
         anim = GetComponent<Animator>();
 
         health = maxHealth;
+
+        direction = 1;
     }
 
     // Update is called once per frame
@@ -41,47 +45,90 @@ public class PlayerBattle : MonoBehaviour
         //moveposition.y = (Input.GetAxis("Vertical"));
 
 
-        if (Input.GetAxisRaw("Horizontal") > 0)
+
+
+        if (Input.GetAxisRaw("Horizontal")!=0||Input.GetAxisRaw("Vertical") !=0)
         {
-            cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
+            anim.SetBool("isMoving", true);
 
-            anim.SetBool("isMovingRight", true);
+            if (Input.GetAxisRaw("Horizontal") != 0)
+            {
+                cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
+                print("should animate");
+             
 
-            _Movement = true;
+
+                if (Input.GetAxisRaw("Horizontal") > 0)
+                {
+
+
+                    if (direction < 0)
+                    {
+                        transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+                        direction *= -1;
+                    }
+                }
+
+
+                if (Input.GetAxisRaw("Horizontal") < 0)
+                {
+
+
+                    if (direction > 0)
+                    {
+                        transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+                        direction *= -1;
+                    }
+                }
+            }
+
+            if (Input.GetAxisRaw("Vertical") != 0)
+            {
+                cc.Move(Vector3.up * Input.GetAxis("Vertical") * speed);
+                print("should also animate");
+
+            }
         }
+
         else
         {
-            anim.SetBool("isMovingRight", false);
+            anim.SetBool("isMoving", false);
         }
 
 
+        //if (Input.GetAxisRaw("Horizontal") > 0)
+        //{
+        //    cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
+
+        //    anim.SetBool("isMovingRight", true);
+
+        //    _Movement = true;
+        //}
+        //else
+        //{
+        //    anim.SetBool("isMovingRight", false);
+        //}
 
 
 
-        if (Input.GetAxisRaw("Horizontal") < 0)
-        {
-            cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
-
-            anim.SetBool("isMovingLeft", true);
-
-            _Movement = true;
-        }
-        else
-        {
-            anim.SetBool("isMovingLeft", false);
-        }
 
 
+        //if (Input.GetAxisRaw("Horizontal") < 0)
+        //{
+        //    cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
 
-        if (Input.GetAxisRaw("Vertical")!= 0)
-        {
-            cc.Move(Vector3.up * Input.GetAxis("Vertical") * speed);
-            _Movement = true;
-        }
-        else
-        {
-            _Movement = false;
-        }
+        //    anim.SetBool("isMovingLeft", true);
+
+        //    _Movement = true;
+        //}
+        //else
+        //{
+        //    anim.SetBool("isMovingLeft", false);
+        //}
+
+
+
+
 
 
 
@@ -90,7 +137,10 @@ public class PlayerBattle : MonoBehaviour
             anim.SetTrigger("isAttacking");
         }
 
-        Debug.Log(Input.GetAxis("Horizontal"));
+        //Debug.Log(Input.GetAxis("Horizontal"));
+
+
+
 
 
         //cc.Move(moveposition * Time.deltaTime * speed);
