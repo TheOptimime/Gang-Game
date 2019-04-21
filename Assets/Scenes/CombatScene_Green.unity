@@ -424,6 +424,8 @@ MonoBehaviour:
   _Movement: 0
   health: 0
   maxHealth: 5
+  beingDamaged: 0
+  invulTime: 2
 --- !u!143 &210257362
 CharacterController:
   m_ObjectHideFlags: 0
@@ -435,13 +437,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0
+  m_Height: 1.3
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: -0.5, z: 0}
+  m_Center: {x: 0, y: -0.6, z: 0}
 --- !u!65 &210257363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -451,9 +453,9 @@ BoxCollider:
   m_GameObject: {fileID: 210257357}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.4, z: 0.2}
+  m_Size: {x: 1, y: 1.4, z: 5}
   m_Center: {x: 0, y: -0.54, z: 0}
 --- !u!54 &210257364
 Rigidbody:
@@ -1539,13 +1541,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0
+  m_Height: 1.3
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: -0.5, z: 0}
+  m_Center: {x: 0, y: -0.6, z: 0}
 --- !u!95 &1934868497
 Animator:
   serializedVersion: 3
@@ -1636,9 +1638,9 @@ BoxCollider:
   m_GameObject: {fileID: 1934868495}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.4, z: 0.2}
+  m_Size: {x: 1, y: 1.5, z: 5}
   m_Center: {x: 0, y: -0.54, z: 0}
 --- !u!54 &1934868501
 Rigidbody:
@@ -1655,7 +1657,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &1934868502
 MonoBehaviour:
   m_ObjectHideFlags: 0

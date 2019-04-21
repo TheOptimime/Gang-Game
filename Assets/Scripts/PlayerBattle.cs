@@ -20,11 +20,11 @@ public class PlayerBattle : MonoBehaviour
 
     int direction;
 
-    bool beingDamaged;
+    public bool beingDamaged;
 
     int takenDamage;
 
-    float invulTime;
+    public float invulTime;
 
 
     void Start()
@@ -40,7 +40,9 @@ public class PlayerBattle : MonoBehaviour
 
         takenDamage = 1;
 
-        StartCoroutine(Invinsible());
+        beingDamaged = false;
+
+
     }
 
     // Update is called once per frame
@@ -105,26 +107,25 @@ public class PlayerBattle : MonoBehaviour
 
         //Debug.Log(Input.GetAxis("Horizontal"));
 
-
-        IEnumerator Example();
-        {
-            print ("no change")
-            yield return new WaitForSeconds(2);
-            invulTime = false;
-            print("DONE!!");
-        }
-
-
         //cc.Move(moveposition * Time.deltaTime * speed);
     }
 
-
-    private void OnCollisionEnter(Collision collision)
+    IEnumerator Invun()
     {
-        if (other.gameObject.tag == ("enemy") && invulTime = false)
+        print("no change");
+        yield return new WaitForSeconds(invulTime);
+        beingDamaged = false;
+        print("DONE!!");
+    }
+
+
+private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == ("enemy") && beingDamaged == false)
         {
-            invulTime = true;
+            beingDamaged = true;
             health -= takenDamage;
+            StartCoroutine(Invun());
 
 
         }
