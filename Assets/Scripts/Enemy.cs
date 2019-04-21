@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
     public float bufferTime;
     public float bufferMaxTime;
 
+    Animator animator;
+
 
 
 
@@ -55,6 +57,7 @@ public class Enemy : MonoBehaviour
     IEnumerator Buffer()
     {
         print("waiting");
+        animator.SetTrigger("hitTaken");
         yield return new WaitForSeconds(bufferTime);
 
         print("done");

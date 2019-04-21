@@ -381,7 +381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210257357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -20.8, z: -50}
+  m_LocalPosition: {x: 0, y: -20.8, z: -191.69298}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1488349701}
@@ -497,7 +497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235473208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.78511, y: -31.795515, z: -44.607025}
+  m_LocalPosition: {x: 21.78511, y: -31.795515, z: -186.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1684151354}
@@ -542,7 +542,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.56078434, g: 0.22352943, b: 0.19215688, a: 1}
+  m_BackGroundColor: {r: 0.3647059, g: 0.38823533, b: 0.27450982, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1886,7 +1886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934868495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.3, y: -21.5, z: -50}
+  m_LocalPosition: {x: 26.3, y: -21.5, z: -191.69298}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1950,7 +1950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 210257359}
-  speed: 4
+  speed: 0
 --- !u!1 &1998406137
 GameObject:
   m_ObjectHideFlags: 0
