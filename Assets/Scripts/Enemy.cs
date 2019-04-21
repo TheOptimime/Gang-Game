@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
 
         if (isDamaged==true)
         {
-            StartCoroutine(Buffer());
+            StartCoroutine(Buffer(bufferTime));
 
 
 
@@ -46,10 +46,10 @@ public class Enemy : MonoBehaviour
 
 
     }
-    IEnumerator Buffer()
+    IEnumerator Buffer(float buffering)
     {
         print("waiting");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(buffering);
         print("done");
         isDamaged = false; 
 
