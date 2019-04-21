@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     BattleArenaTrigger bat;
 
+    EnemyMapMovement[] emms;
+
     public enum GameState
     {
         InOverworld,
@@ -57,6 +59,8 @@ public class GameManager : MonoBehaviour
         currentTime = startingTime;
         bat = FindObjectOfType<BattleArenaTrigger>();
 
+        emmis = new EnemyMapMovementInfo[2];
+
         for(int i = 0; i < bat.triggerCollisions.Length; i++)
         {
             //bat.triggerCollisions[i].zoneColor;
@@ -79,32 +83,33 @@ public class GameManager : MonoBehaviour
 
         if(gameState == GameState.InOverworld)
         {
-            if (overworldInitialLoad != true)
+            if (overworldInitialLoad == true)
             {
-                EnemyMapMovement[] emms = FindObjectsOfType<EnemyMapMovement>();
+                emms = FindObjectsOfType<EnemyMapMovement>();
                 
                 for (int i = 0; i < emms.Length; i++)
                 {
-                    if(emms[i] != null)
+                    if(emms[i] != null || emms[i] == new EnemyMapMovement())
                     {
                         emms[i].SetEnemyMapMovementData(emmis[i]);
+                        print("set");
                     }
                     else
                     {
-                        emmis[i] = emms[i].StoreEnemyMapMovementData();
+                        //emmis[i] = emms[i].StoreEnemyMapMovementData();
                     }
                     
                 }
 
 
 
-                overworldInitialLoad = true;
+                overworldInitialLoad = false;
             }
             
         }
         else if(gameState == GameState.InBattle)
         {
-            overworldInitialLoad = false;
+            overworldInitialLoad = true;
 
             if(numberOfEnemies <= 0)
             {
@@ -136,6 +141,13 @@ public class GameManager : MonoBehaviour
     public void LoseGame()
     {
         gameState = GameState.EndGame;
+    }
+
+    public void SwitchToCombat()
+    {
+        emmis[0] = emms[0].StoreEnemyMapMovementData();
+        emmis[1] = emms[1].StoreEnemyMapMovementData();
+        SceneManager.LoadScene(1);
     }
 
 }

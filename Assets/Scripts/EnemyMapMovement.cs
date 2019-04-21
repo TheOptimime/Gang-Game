@@ -24,6 +24,11 @@ public class EnemyMapMovement : MonoBehaviour
         bat = FindObjectOfType<BattleArenaTrigger>();
         cc = gameObject.AddComponent<CharacterController>();
 
+        if(SpawnPoints == null)
+        {
+            SpawnPoints = GameObject.Find("SpawnPoints");
+        }
+
         Transform[] spawnPoints = GetComponentsInChildren<Transform>();
 
         transform.position = spawnPoints[Random.Range(0, spawnPoints.Length - 1)].position;
@@ -74,6 +79,7 @@ public class EnemyMapMovement : MonoBehaviour
 
     public void SetEnemyMapMovementData(EnemyMapMovementInfo emmi)
     {
+        emmi = new EnemyMapMovementInfo();
         target = emmi.target;
         speed = emmi.speed;
         transform.position = emmi.position;
