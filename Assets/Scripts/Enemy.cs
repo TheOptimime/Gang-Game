@@ -29,16 +29,15 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
-        if (!isDamaged)
-        {
-
-            if (isDamaged)
-            {
-                isDamaged = false;
-
-                bufferTime = bufferMaxTime;
-            }
+        if (isDamaged)
+        { 
+            //health change
+            //set isDamaged to false
+            
         }
+
+
+               
 
         
     }
