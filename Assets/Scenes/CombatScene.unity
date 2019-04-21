@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: 210257360}
   - component: {fileID: 210257362}
   - component: {fileID: 210257361}
-  - component: {fileID: 210257365}
   - component: {fileID: 210257363}
   - component: {fileID: 210257364}
   m_Layer: 0
@@ -380,19 +379,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &210257365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210257357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 470529e36846a4a53b15e78565e256c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
 --- !u!1 &366613872
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470529e36846a4a53b15e78565e256c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 0
+  bufferTime: 0
+  bufferMaxTime: 0
   damage: 1
 --- !u!135 &1488349703
 SphereCollider:
@@ -789,6 +779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 5
+  bufferTime: 1
+  bufferMaxTime: 1
 --- !u!1 &1998406137
 GameObject:
   m_ObjectHideFlags: 0
