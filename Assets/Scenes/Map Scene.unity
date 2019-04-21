@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneColor: 0
+  zoneColor: 2
   sceneNumber: 1
 --- !u!1 &54751872
 GameObject:
@@ -268,7 +268,7 @@ MeshCollider:
   m_GameObject: {fileID: 54751872}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -613,7 +613,7 @@ MeshCollider:
   m_GameObject: {fileID: 267654192}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -5549,7 +5549,7 @@ MeshCollider:
   m_GameObject: {fileID: 340610890}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -10744,7 +10744,7 @@ MeshCollider:
   m_GameObject: {fileID: 394825010}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -20431,7 +20431,7 @@ MeshCollider:
   m_GameObject: {fileID: 599932809}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -20655,7 +20655,7 @@ MeshCollider:
   m_GameObject: {fileID: 792655962}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -25780,7 +25780,7 @@ MeshCollider:
   m_GameObject: {fileID: 1260337940}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -35632,6 +35632,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 357675938683057463, guid: 1dd55c9dca07b7a449120f1eea109af4,
+        type: 3}
+      propertyPath: combatSceneGreen
+      value: CombatScene_Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 357675938683057463, guid: 1dd55c9dca07b7a449120f1eea109af4,
+        type: 3}
+      propertyPath: combatSceneRed
+      value: CombatScene_Red
+      objectReference: {fileID: 0}
     - target: {fileID: 357675938616622864, guid: 1dd55c9dca07b7a449120f1eea109af4,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -45319,7 +45329,7 @@ MeshCollider:
   m_GameObject: {fileID: 1898150769}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
