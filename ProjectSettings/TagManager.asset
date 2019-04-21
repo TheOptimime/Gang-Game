@@ -6,6 +6,9 @@ TagManager:
   tags:
   - enemy
   - MapEnemy
+  - Red
+  - Green
+  - Blue
   layers:
   - Default
   - TransparentFX

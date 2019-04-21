@@ -6,15 +6,20 @@ using UnityEngine.SceneManagement;
 public class TriggerCollision : MonoBehaviour
 
 {
-
+    public enum ZoneColor
+    {
+        Red,
+        Green,
+        Blue,
+        Nuetral,
+    }
+    public ZoneColor zoneColor;
     public int sceneNumber;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
