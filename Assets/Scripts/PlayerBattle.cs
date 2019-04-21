@@ -34,7 +34,8 @@ public class PlayerBattle : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
-        health = maxHealth;
+        //health = maxHealth;
+        health = GameManager.instance.playerHealth;
 
         direction = 1;
 

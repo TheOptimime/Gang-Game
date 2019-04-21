@@ -12,6 +12,14 @@ public class GameManager : MonoBehaviour
     public static int score, redScore, greenScore;
     public string overworldScene, loseGameScene, winGameScene;
 
+    public int playerHealth;
+
+    public EnemyMapMovementInfo[] emmis;
+
+    bool overworldInitialLoad;
+
+    BattleArenaTrigger bat;
+
     public enum GameState
     {
         InOverworld,
@@ -31,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Text countdownTimer;
 
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +55,13 @@ public class GameManager : MonoBehaviour
         }
 
         currentTime = startingTime;
+        bat = FindObjectOfType<BattleArenaTrigger>();
+
+        for(int i = 0; i < bat.triggerCollisions.Length; i++)
+        {
+            //bat.triggerCollisions[i].zoneColor;
+        }
+
     }
 
     void Update()
@@ -64,10 +79,33 @@ public class GameManager : MonoBehaviour
 
         if(gameState == GameState.InOverworld)
         {
+            if (overworldInitialLoad != true)
+            {
+                EnemyMapMovement[] emms = FindObjectsOfType<EnemyMapMovement>();
+                
+                for (int i = 0; i < emms.Length; i++)
+                {
+                    if(emms[i] != null)
+                    {
+                        emms[i].SetEnemyMapMovementData(emmis[i]);
+                    }
+                    else
+                    {
+                        emmis[i] = emms[i].StoreEnemyMapMovementData();
+                    }
+                    
+                }
 
+
+
+                overworldInitialLoad = true;
+            }
+            
         }
         else if(gameState == GameState.InBattle)
         {
+            overworldInitialLoad = false;
+
             if(numberOfEnemies <= 0)
             {
                 numberOfEnemies = 0;
@@ -97,7 +135,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseGame()
     {
-
+        gameState = GameState.EndGame;
     }
 
 }

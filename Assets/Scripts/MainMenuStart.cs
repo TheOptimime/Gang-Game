@@ -14,10 +14,10 @@ public class MainMenuStart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey)
+        if(Input.anyKey)
         {
-            SceneManager.LoadScene(0);
-            Debug.Log("Where Am I");
+            SceneManager.LoadScene(3);
+            Debug.Log("ChangeScreen");
         }
     }
 }

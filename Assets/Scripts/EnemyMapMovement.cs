@@ -6,22 +6,27 @@ using UnityEngine.SceneManagement;
 public class EnemyMapMovement : MonoBehaviour
 
 {
-    public class EnemyPlayer
-    {
-
-    }
+    
     public BattleArenaTrigger bat;
     public float speed = 1;
     public int greenPoints;
     public int redPoints;
     public int target;
     public CharacterController cc;
+    public bool hidden;
+    public GangColor gangColor;
+
+    public GameObject SpawnPoints;
 
     // Start is called before the first frame update
     void Start()
     {
         bat = FindObjectOfType<BattleArenaTrigger>();
         cc = gameObject.AddComponent<CharacterController>();
+
+        Transform[] spawnPoints = GetComponentsInChildren<Transform>();
+
+        transform.position = spawnPoints[Random.Range(0, spawnPoints.Length - 1)].position;
 
     }
 
@@ -66,4 +71,32 @@ public class EnemyMapMovement : MonoBehaviour
 
 
     }
+
+    public void SetEnemyMapMovementData(EnemyMapMovementInfo emmi)
+    {
+        target = emmi.target;
+        speed = emmi.speed;
+        transform.position = emmi.position;
+        gangColor = emmi.gangColor;
+    }
+
+    public EnemyMapMovementInfo StoreEnemyMapMovementData()
+    {
+        EnemyMapMovementInfo emmi = new EnemyMapMovementInfo();
+        emmi.target = target;
+        emmi.speed = speed;
+        emmi.position = transform.position;
+        emmi.gangColor = gangColor;
+
+        return (emmi);
+    }
+
+}
+
+public class EnemyMapMovementInfo
+{
+    public Vector3 position;
+    public int target;
+    public float speed;
+    public GangColor gangColor;
 }
