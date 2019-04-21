@@ -5,14 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TriggerCollision : MonoBehaviour
 {
-    public enum ZoneColor
-    {
-        Blue,
-        Green,
-        Red,
-        Nuetral,
-    }
-    public ZoneColor zoneColor;
+    
+    public GangColor zoneColor;
     public int sceneNumber;
     // Start is called before the first frame update
     // ontriggerenter  scenemanager
@@ -28,13 +22,14 @@ public class TriggerCollision : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
-                SceneManager.LoadScene(1);
+                GameManager.instance.SwitchToCombat();
+                //SceneManager.LoadScene(1);
                 Debug.Log("Trigger Active");
             }
 
             if (other.gameObject.tag == "MapEnemy")
             {
-
+                zoneColor = other.gameObject.GetComponent<EnemyMapMovement>().gangColor;
                 other.gameObject.transform.position = new Vector3(-100, -100, -100);
                 Debug.Log("EnemyTriggerActive");
             }
