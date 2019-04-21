@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static int numberOfEnemies;
     public static int score, redScore, greenScore;
-    public string overworldScene, loseGameScene, winGameScene;
+    public string overworldScene, loseGameScene, winGameScene, combatSceneGreen, combatSceneRed;
 
     public int playerHealth;
 
@@ -29,7 +29,9 @@ public class GameManager : MonoBehaviour
         EndGame
     }
 
-    public static GameState gameState;
+    public GameState gameState;
+
+    GangColor[] ZoneColors;
 
     private void Awake()
     {
@@ -56,22 +58,34 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        ZoneColors = new GangColor[11];
+
+        
+
         currentTime = startingTime;
-        bat = FindObjectOfType<BattleArenaTrigger>();
+        if(gameState == GameState.InOverworld)
+        {
+            bat = FindObjectOfType<BattleArenaTrigger>();
+
+            for (int i = 0; i < bat.triggerCollisions.Length; i++)
+            {
+                ZoneColors[i] = bat.triggerCollisions[i].zoneColor;
+            }
+
+            emms = FindObjectsOfType<EnemyMapMovement>();
+        }
+        
 
         emmis = new EnemyMapMovementInfo[2];
 
-        for(int i = 0; i < bat.triggerCollisions.Length; i++)
-        {
-            //bat.triggerCollisions[i].zoneColor;
-        }
-        emms = FindObjectsOfType<EnemyMapMovement>();
+        
+        
     }
 
     void Update()
     {
-       // print(numberOfEnemies);
-        
+        // print(numberOfEnemies);
+
         currentTime -= 1 * Time.deltaTime;
         countdownTimer.text = currentTime.ToString("0");
 
@@ -81,15 +95,20 @@ public class GameManager : MonoBehaviour
             gameState = GameState.EndGame;
         }
 
-        if(gameState == GameState.InOverworld)
+        if (gameState == GameState.InOverworld)
         {
+            for (int i = 0; i < bat.triggerCollisions.Length; i++)
+            {
+                bat.triggerCollisions[i].zoneColor = ZoneColors[i];
+            }
+
             if (overworldInitialLoad == true)
             {
                 emms = FindObjectsOfType<EnemyMapMovement>();
-                
+
                 for (int i = 0; i < emms.Length; i++)
                 {
-                    if(emms[i] != null || emms[i] == new EnemyMapMovement())
+                    if (emms[i] != null || emms[i] == new EnemyMapMovement())
                     {
                         emms[i].SetEnemyMapMovementData(emmis[i]);
                         print("set");
@@ -98,14 +117,13 @@ public class GameManager : MonoBehaviour
                     {
                         //emmis[i] = emms[i].StoreEnemyMapMovementData();
                     }
-                    
+
                 }
 
 
 
                 overworldInitialLoad = false;
             }
-            
         }
         else if(gameState == GameState.InBattle)
         {
@@ -143,7 +161,7 @@ public class GameManager : MonoBehaviour
         gameState = GameState.EndGame;
     }
 
-    public void SwitchToCombat()
+    public void SwitchToCombat(GangColor color)
     {
         if(emmis[0] == null)
         {
@@ -155,7 +173,25 @@ public class GameManager : MonoBehaviour
         }
         emmis[0] = emms[0].StoreEnemyMapMovementData();
         emmis[1] = emms[1].StoreEnemyMapMovementData();
-        SceneManager.LoadScene(1);
+
+
+        gameState = GameState.InBattle;
+
+        if (color == GangColor.Green)
+        {
+            SceneManager.LoadScene(combatSceneGreen);
+        }
+        else if(color == GangColor.Red)
+        {
+            SceneManager.LoadScene(combatSceneRed);
+        }
+        else
+        {
+            SceneManager.LoadScene(combatSceneGreen);
+        }
+
+        
+        
     }
 
 }
