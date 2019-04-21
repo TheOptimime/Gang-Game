@@ -328,8 +328,6 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-<<<<<<< HEAD:Assets/Knight Files/Knight PNG/Player Animator.controller
-<<<<<<< HEAD:Assets/Knight Files/Knight PNG/Knight_idle_02.controller
     m_Controller: {fileID: 0}
   - m_Name: isHurt
     m_Type: 9
@@ -337,12 +335,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-=======
-    m_Controller: {fileID: 9100000}
->>>>>>> 9688f8c8eb17f5a67e2121392b73533e75dcf582:Assets/Knight Files/Knight PNG/Player Animator.controller
-=======
-    m_Controller: {fileID: 0}
->>>>>>> parent of 2b296c6... Enemy movement update:Assets/Knight Files/Knight PNG/Knight_idle_02.controller
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -439,20 +431,12 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
-<<<<<<< HEAD:Assets/Knight Files/Knight PNG/Player Animator.controller
-<<<<<<< HEAD:Assets/Knight Files/Knight PNG/Knight_idle_02.controller
 --- !u!1101 &8015075200942159902
 AnimatorStateTransition:
-=======
---- !u!1107 &3980193917362865351
-AnimatorStateMachine:
-  serializedVersion: 5
->>>>>>> 9688f8c8eb17f5a67e2121392b73533e75dcf582:Assets/Knight Files/Knight PNG/Player Animator.controller
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Knight Files/Knight PNG/Knight_idle_02.controller
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
@@ -469,19 +453,3 @@ AnimatorStateMachine:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
-=======
-  m_Name: New Layer
-  m_ChildStates: []
-  m_ChildStateMachines: []
-  m_AnyStateTransitions: []
-  m_EntryTransitions: []
-  m_StateMachineTransitions: {}
-  m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 0}
->>>>>>> 9688f8c8eb17f5a67e2121392b73533e75dcf582:Assets/Knight Files/Knight PNG/Player Animator.controller
-=======
->>>>>>> parent of 2b296c6... Enemy movement update:Assets/Knight Files/Knight PNG/Knight_idle_02.controller
