@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class TriggerCollision : MonoBehaviour
 {
-    public GameObject Player;
     public enum ZoneColor
     {
         Blue,
@@ -25,18 +24,8 @@ public class TriggerCollision : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-       if(other.gameObject.tag=="Player")
-        {
-            SceneManager.LoadScene(1);
-            Debug.Log("Trigger Active");
-        }
-
-        if (other.gameObject.tag == "MapEnemy")
-        {
-            Debug.Log("EnemyTriggerActive");
-        }
-       
-        
+        SceneManager.LoadScene(1);
+        Debug.Log("Trigger Active");
     }
     void Update()
     {
