@@ -221,10 +221,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8211721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &129643423
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,10 +327,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 129643423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &178457708
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,10 +474,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 232783137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &275179472
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,10 +580,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 275179472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &386804695
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,10 +811,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 390995812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &394358331
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,10 +917,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 394358331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &513392311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,10 +1389,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1082635296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &1098083058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,10 +2024,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1505340327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &1507541156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,6 +2074,7 @@ GameObject:
   - component: {fileID: 1832561929}
   - component: {fileID: 1832561928}
   - component: {fileID: 1832561927}
+  - component: {fileID: 1832561931}
   m_Layer: 0
   m_Name: EnemyPlayerGreen
   m_TagString: MapEnemy
@@ -2146,6 +2155,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1832561931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832561926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bat: {fileID: 0}
+  speed: 19.88
+  greenPoints: 0
+  redPoints: 0
+  target: 4
+  cc: {fileID: 0}
 --- !u!1 &1936647443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,6 +2276,7 @@ GameObject:
   - component: {fileID: 1946090102}
   - component: {fileID: 1946090101}
   - component: {fileID: 1946090100}
+  - component: {fileID: 1946090104}
   m_Layer: 0
   m_Name: EnemyPlayerRed
   m_TagString: MapEnemy
@@ -2329,6 +2357,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1946090104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946090099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bat: {fileID: 0}
+  speed: 19.88
+  greenPoints: 0
+  redPoints: 0
+  target: 2
+  cc: {fileID: 0}
 --- !u!1 &2025717426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,10 +2476,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2025717426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &2044282124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,10 +2582,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2044282124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &2075596337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,10 +2688,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2075596337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a88b63391ff614092b889b8978f09e, type: 3}
+  m_Script: {fileID: 11500000, guid: d2a62047210dbd54caeba4ced5e475e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  zoneColor: 0
+  sceneNumber: 0
 --- !u!1 &2079892134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,8 +2737,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e0a2514fc4ba247a6a9548bb9545ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggers: []
-  triggerCollisions: []
+  triggers:
+  - {fileID: 8211721}
+  - {fileID: 2044282124}
+  - {fileID: 390995812}
+  - {fileID: 394358331}
+  - {fileID: 2025717426}
+  - {fileID: 275179472}
+  - {fileID: 2075596337}
+  - {fileID: 1505340327}
+  - {fileID: 232783137}
+  - {fileID: 129643423}
+  - {fileID: 1082635296}
+  triggerCollisions:
+  - {fileID: 8211726}
+  - {fileID: 2044282129}
+  - {fileID: 390995817}
+  - {fileID: 394358336}
+  - {fileID: 2025717431}
+  - {fileID: 275179477}
+  - {fileID: 2075596342}
+  - {fileID: 1505340332}
+  - {fileID: 232783142}
+  - {fileID: 129643428}
+  - {fileID: 1082635301}
   sceneNumber: 0
 --- !u!1 &2136673652
 GameObject:

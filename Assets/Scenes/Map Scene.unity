@@ -705,7 +705,11 @@ Transform:
   m_GameObject: {fileID: 386804695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 38, y: 0, z: 44}
+=======
+  m_LocalPosition: {x: 130.8, y: 0, z: -47.350006}
+>>>>>>> parent of e0b39a6... update
 =======
   m_LocalPosition: {x: 130.8, y: 0, z: -47.350006}
 >>>>>>> parent of e0b39a6... update
@@ -2367,7 +2371,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   zoneColor: 0
+=======
+>>>>>>> parent of e0b39a6... update
 =======
 >>>>>>> parent of e0b39a6... update
   sceneNumber: 0
