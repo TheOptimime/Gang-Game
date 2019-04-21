@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneColor: 0
-  sceneNumber: 0
+  sceneNumber: 1
 --- !u!1 &129643423
 GameObject:
   m_ObjectHideFlags: 0
