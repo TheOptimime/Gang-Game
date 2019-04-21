@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         {
             //bat.triggerCollisions[i].zoneColor;
         }
-
+        emms = FindObjectsOfType<EnemyMapMovement>();
     }
 
     void Update()
@@ -145,6 +145,14 @@ public class GameManager : MonoBehaviour
 
     public void SwitchToCombat()
     {
+        if(emmis[0] == null)
+        {
+            emmis[0] = new EnemyMapMovementInfo();
+        }
+        if(emmis[1] == null)
+        {
+            emmis[1] = new EnemyMapMovementInfo();
+        }
         emmis[0] = emms[0].StoreEnemyMapMovementData();
         emmis[1] = emms[1].StoreEnemyMapMovementData();
         SceneManager.LoadScene(1);

@@ -75,11 +75,12 @@ public class PlayerBattle : MonoBehaviour
                 if (Input.GetAxisRaw("Horizontal") < 0)
                 {
 
-
+                    Debug.Log("Should Flip");
                     if (direction > 0)
                     {
                         transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
                         direction *= -1;
+                        Debug.Log("Flip");
                     }
                 }
             }
@@ -106,7 +107,7 @@ public class PlayerBattle : MonoBehaviour
 
         if (health <= 0)
         {
-            //GameManager.instance.lose
+            GameManager.instance.LoseGame();
         }
 
 
