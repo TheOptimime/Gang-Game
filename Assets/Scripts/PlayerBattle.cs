@@ -57,9 +57,7 @@ public class PlayerBattle : MonoBehaviour
             if (Input.GetAxisRaw("Horizontal") != 0)
             {
                 cc.Move(Vector3.right * Input.GetAxis("Horizontal") * speed);
-                print("should animate");
              
-
 
                 if (Input.GetAxisRaw("Horizontal") > 0)
                 {
@@ -88,7 +86,6 @@ public class PlayerBattle : MonoBehaviour
             if (Input.GetAxisRaw("Vertical") != 0)
             {
                 cc.Move(Vector3.up * Input.GetAxis("Vertical") * speed);
-                print("should also animate");
 
             }
         }
@@ -105,6 +102,14 @@ public class PlayerBattle : MonoBehaviour
             anim.SetTrigger("isAttacking");
         }
 
+
+        if (health <= 0)
+        {
+            //GameManager.instance.lose
+        }
+
+
+
         //Debug.Log(Input.GetAxis("Horizontal"));
 
         //cc.Move(moveposition * Time.deltaTime * speed);
@@ -112,25 +117,34 @@ public class PlayerBattle : MonoBehaviour
 
     IEnumerator Invun()
     {
-        print("no change");
+        //print("no change");
         yield return new WaitForSeconds(invulTime);
         beingDamaged = false;
-        print("DONE!!");
+        //print("DONE!!");
     }
 
 
-private void OnCollisionEnter(Collision other)
+    private void OnControllerColliderHit(ControllerColliderHit other)
     {
+        //Debug.Log("Should be damaged");
         if (other.gameObject.tag == ("enemy") && beingDamaged == false)
         {
             beingDamaged = true;
+
+            anim.SetTrigger("isHurt");
+
+            //Debug.Log("Should be hurt");
+
             health -= takenDamage;
+
             StartCoroutine(Invun());
 
 
         }
 
     }
+
+ 
 
 
 
