@@ -9,17 +9,18 @@ public class Enemy : MonoBehaviour
 
     public int health, maxHealth;
 
-    bool isDamaged;
-    
+    protected bool isDamaged;
 
     public float bufferTime;
     public float bufferMaxTime;
 
 
+
+
     void Start()
     {
         health = maxHealth;
-
+        isDamaged = false;
         
 
 
@@ -29,17 +30,30 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
-        if (!isDamaged)
+        if (isDamaged==true)
         {
+            StartCoroutine(Buffer(bufferTime));
 
-            if (isDamaged)
-            {
-                isDamaged = false;
 
-                bufferTime = bufferMaxTime;
-            }
+
+            //health change
+            //set isDamaged to false
+            
         }
 
-        
+
+               
+
+
     }
+    IEnumerator Buffer(float buffering)
+    {
+        print("waiting");
+        yield return new WaitForSeconds(buffering);
+
+        print("done");
+        isDamaged = false; 
+
+    }
+   
 }
