@@ -1663,7 +1663,7 @@ MonoBehaviour:
   overworldScene: 
   loseGameScene: 
   winGameScene: 
-  playerHealth: 0
+  playerHealth: 10
   countdownTimer: {fileID: 0}
 --- !u!4 &1661359997
 Transform:
