@@ -16,7 +16,7 @@ public class MainMenuStart : MonoBehaviour
     {
         if(Input.anyKey)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
             Debug.Log("ChangeScreen");
         }
     }
